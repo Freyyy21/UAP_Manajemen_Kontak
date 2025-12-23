@@ -1,7 +1,11 @@
 package com.uap;
 
+import com.uap.view.ContactManagerView;
+
+import javax.swing.SwingUtilities;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        SwingUtilities.invokeLater(ContactManagerView::new);
     }
 }
