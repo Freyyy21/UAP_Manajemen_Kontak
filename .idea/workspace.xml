@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a215405-82ab-4f59-acd0-b1a6621f5f1e" name="Changes" comment="" />
+    <list default="true" id="a9e6022a-8a0a-4d9a-ae07-9c14406547c2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,43 +13,43 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="37CbCLHw4ooTaGS2hioYgmcpmMF" />
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Freyyy21"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Freyyy21/UAP_Manajemen_Kontak.git",
+    "accountId": "3e83d5e6-7866-4cb7-b674-0db14278f50e"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="37FWa63sKkZhV3Ifo3TYqtDAQSc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "backend/controller",
+    "git-widget-placeholder": "view",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/faizulmushofa/Documents/MyProject/UAP_Manajemen_Kontak",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "last_opened_file_path": "C:/Github/UAP_Manajemen_Kontak"
   }
 }]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-30f59d01ecdd-cffe25b9f5b3-intellij.indexing.shared.core-IU-253.28294.334" />
-      </set>
-    </attachedChunks>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3a215405-82ab-4f59-acd0-b1a6621f5f1e" name="Changes" comment="" />
-      <created>1766409871073</created>
+      <changelist id="a9e6022a-8a0a-4d9a-ae07-9c14406547c2" name="Changes" comment="" />
+      <created>1766499359994</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1766409871073</updated>
+      <updated>1766499359994</updated>
     </task>
     <servers />
   </component>
