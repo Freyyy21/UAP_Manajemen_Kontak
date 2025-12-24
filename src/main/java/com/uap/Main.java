@@ -19,4 +19,6 @@ public class Main {
             loginView.setVisible(true);
         });
     }
+
+    //test
 }
