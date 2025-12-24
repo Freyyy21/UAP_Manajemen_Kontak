@@ -2,19 +2,24 @@
 
 Aplikasi manajemen kontak berbasis desktop yang dibangun menggunakan Java Swing dengan fitur CRUD (Create, Read, Update, Delete) lengkap dan antarmuka yang modern.
 
+---
+
 ## 📋 Daftar Isi
 
-- [Fitur Utama](#fitur-utama)
-- [Teknologi](#teknologi)
-- [Struktur Proyek](#struktur-proyek)
-- [Instalasi](#instalasi)
-- [Cara Menjalankan](#cara-menjalankan)
-- [Kredensial Login](#kredensial-login)
-- [Panduan Penggunaan](#panduan-penggunaan)
-- [Screenshot](#screenshot)
-- [Arsitektur Aplikasi](#arsitektur-aplikasi)
-- [Validasi Data](#validasi-data)
-- [Kontributor](#kontributor)
+- [Fitur Utama](#-fitur-utama)
+- [Teknologi](#️-teknologi)
+- [Struktur Proyek](#-struktur-proyek)
+- [Instalasi](#-instalasi)
+- [Cara Menjalankan](#-cara-menjalankan)
+- [Kredensial Login](#-kredensial-login)
+- [Panduan Penggunaan](#-panduan-penggunaan)
+- [Arsitektur Aplikasi](#️-arsitektur-aplikasi)
+- [Validasi Data](#-validasi-data)
+- [Desain UI](#-desain-ui)
+- [Troubleshooting](#-troubleshooting)
+- [Future Improvements](#-future-improvements)
+- [Kontributor](#-kontributor)
+- [Lisensi](#-lisensi)
 
 ---
 
@@ -32,7 +37,7 @@ Aplikasi manajemen kontak berbasis desktop yang dibangun menggunakan Java Swing 
     - Status Favorit
 - Filter berdasarkan kategori (Friend, Family, School, Work)
 - Filter kontak favorit
-- Pencarian kontak by nama atau nomor telepon
+- Pencarian kontak berdasarkan nama atau nomor telepon
 - Tombol logout
 
 ### ➕ Tambah Kontak
@@ -123,9 +128,9 @@ contact-manager/
     - Visual Studio Code dengan Extension Pack for Java
 
 3. **Lombok Plugin** (untuk IDE)
-    - IntelliJ IDEA: File → Settings → Plugins → Cari "Lombok" → Install
-    - Eclipse: Download lombok.jar dari [projectlombok.org](https://projectlombok.org/) → Run installer
-    - NetBeans: Sudah include support Lombok
+    - **IntelliJ IDEA**: File → Settings → Plugins → Cari "Lombok" → Install
+    - **Eclipse**: Download lombok.jar dari [projectlombok.org](https://projectlombok.org/) → Run installer
+    - **NetBeans**: Sudah include support Lombok
 
 ### Langkah Instalasi
 
@@ -180,10 +185,10 @@ contact-manager/
 
 Aplikasi memiliki 2 akun default:
 
-| Username | Password  |
-|----------|-----------|
-| `fazel`  | `fazel123`|
-| `faizul` | `faizul123`|
+| Username | Password    |
+|----------|-------------|
+| `fazel`  | `fazel123`  |
+| `faizul` | `faizul123` |
 
 ---
 
@@ -236,98 +241,6 @@ Aplikasi memiliki 2 akun default:
 - Klik tombol **"Logout"** di pojok kanan atas Dashboard
 - Konfirmasi logout
 - Kembali ke halaman login
-
----
-
-## 📸 Screenshot
-
-### 1. Login Page
-```
-┌─────────────────────────────────────┐
-│     Contact Manager (Blue)          │
-│  Manage your contacts efficiently   │
-│                                     │
-│  ┌───────────────────────────────┐ │
-│  │   Welcome Back!               │ │
-│  │   Please login to continue    │ │
-│  │                               │ │
-│  │   Username: [___________]     │ │
-│  │   Password: [___________]     │ │
-│  │                               │ │
-│  │   [     LOGIN (Blue)     ]    │ │
-│  │                               │ │
-│  │   Demo Accounts:              │ │
-│  │   fazel / fazel123            │ │
-│  │   faizul / faizul123          │ │
-│  └───────────────────────────────┘ │
-└─────────────────────────────────────┘
-```
-
-### 2. Dashboard
-```
-┌────────────────────────────────────────────────────────────┐
-│ Contact Manager (Blue)          Welcome, fazel   [Logout]  │
-├────────────────────────────────────────────────────────────┤
-│ Search: [______] Category: [All ▼] [✓] Favorites  [+Add]  │
-├────────────────────────────────────────────────────────────┤
-│ Name            │ Category  │ Favorite                     │
-│─────────────────┼───────────┼──────────                    │
-│ John Doe        │ Friend    │ ★ Yes                        │
-│ Jane Smith      │ Family    │ No                           │
-│ Bob Wilson      │ Work      │ ★ Yes                        │
-│ Alice Brown     │ School    │ No                           │
-└────────────────────────────────────────────────────────────┘
-```
-
-### 3. Add Contact Page
-```
-┌─────────────────────────────────────┐
-│ Add New Contact (Blue)              │
-├─────────────────────────────────────┤
-│                                     │
-│  Name *                             │
-│  [____________________________]     │
-│                                     │
-│  Phone *                            │
-│  [____________________________]     │
-│                                     │
-│  Email                              │
-│  [____________________________]     │
-│                                     │
-│  Category                           │
-│  [Friend ▼                    ]     │
-│                                     │
-│  [✓] Mark as Favorite ⭐            │
-│                                     │
-├─────────────────────────────────────┤
-│              [Cancel] [Save Contact]│
-└─────────────────────────────────────┘
-```
-
-### 4. Contact Detail Page
-```
-┌─────────────────────────────────────┐
-│ Contact Details (Blue)              │
-├─────────────────────────────────────┤
-│                                     │
-│  Name *                             │
-│  [John Doe                    ]     │
-│                                     │
-│  Phone *                            │
-│  [+1234567890                 ]     │
-│                                     │
-│  Email                              │
-│  [john@example.com            ]     │
-│                                     │
-│  Category                           │
-│  [Friend ▼                    ]     │
-│                                     │
-│  [✓] Mark as Favorite ⭐            │
-│                                     │
-├─────────────────────────────────────┤
-│ [Delete]              [Back] [Edit] │
-└─────────────────────────────────────┘
-```
 
 ---
 
@@ -396,8 +309,8 @@ Aplikasi memiliki 2 akun default:
 - Error: "Invalid email format"
 
 ### Pop-up Notifikasi
-- ✅ **Success**: Notifikasi hijau untuk aksi berhasil
-- ❌ **Error**: Notifikasi merah untuk validasi gagal
+- ✅ **Success**: Notifikasi untuk aksi berhasil
+- ❌ **Error**: Notifikasi untuk validasi gagal
 - ⚠️ **Warning**: Konfirmasi untuk aksi berbahaya (delete, cancel)
 
 ---
@@ -406,15 +319,15 @@ Aplikasi memiliki 2 akun default:
 
 ### Color Palette
 
-| Elemen | Warna | Hex Code | Penggunaan |
-|--------|-------|----------|------------|
-| Primary Blue | `rgb(33, 150, 243)` | #2196F3 | Header, Login Button, Save Button |
-| Light Blue Hover | `rgb(25, 118, 210)` | #1976D2 | Button Hover |
-| Red | `rgb(244, 67, 54)` | #F44336 | Delete Button, Cancel Button |
-| Orange | `rgb(255, 152, 0)` | #FF9800 | Edit Button |
-| Gray | `rgb(158, 158, 158)` | #9E9E9E | Back/Cancel Button |
-| Background | `rgb(245, 245, 245)` | #F5F5F5 | App Background |
-| White | `rgb(255, 255, 255)` | #FFFFFF | Cards, Buttons Text |
+| Elemen            | Warna                   | Hex Code | Penggunaan                        |
+|-------------------|-------------------------|----------|-----------------------------------|
+| Primary Blue      | `rgb(33, 150, 243)`     | #2196F3  | Header, Login Button, Save Button |
+| Light Blue Hover  | `rgb(25, 118, 210)`     | #1976D2  | Button Hover                      |
+| Red               | `rgb(244, 67, 54)`      | #F44336  | Delete Button, Cancel Button      |
+| Orange            | `rgb(255, 152, 0)`      | #FF9800  | Edit Button                       |
+| Gray              | `rgb(158, 158, 158)`    | #9E9E9E  | Back/Cancel Button                |
+| Background        | `rgb(245, 245, 245)`    | #F5F5F5  | App Background                    |
+| White             | `rgb(255, 255, 255)`    | #FFFFFF  | Cards, Buttons Text               |
 
 ### Typography
 - **Font Family**: Segoe UI
@@ -424,7 +337,44 @@ Aplikasi memiliki 2 akun default:
 
 ---
 
-## 📝 TODO / Future Improvements
+## 🔧 Troubleshooting
+
+### Problem: Button tidak berwarna (putih semua)
+
+**Solution**: Pastikan sudah menambahkan di setiap button:
+```java
+button.setOpaque(true);
+button.setContentAreaFilled(true);
+button.setBorderPainted(false);
+```
+
+### Problem: Lombok error (getter/setter not found)
+
+**Solution**:
+1. Install Lombok plugin di IDE
+2. Enable Annotation Processing
+3. Rebuild project
+
+### Problem: File `contacts.csv` tidak ditemukan
+
+**Solution**: Aplikasi akan otomatis membuat folder dan file. Pastikan aplikasi punya write permission.
+
+### Problem: Data tidak tersimpan
+
+**Solution**:
+1. Cek apakah folder `data/` ada dan bisa ditulis
+2. Cek file `data/contacts.csv` permission
+
+### Problem: Validasi error terus
+
+**Solution**:
+- **Nama**: Jangan kosong
+- **Phone**: Format `+1234567890` atau `081234567890`
+- **Email**: Format `example@domain.com` (atau kosongkan)
+
+---
+
+## 📝 Future Improvements
 
 - [ ] Import/Export kontak dari/ke file
 - [ ] Tambah foto profil kontak
@@ -441,9 +391,10 @@ Aplikasi memiliki 2 akun default:
 
 ## 👥 Kontributor
 
-- **Developer**: 1. Faizul Mushofa (202410370110418)
-                 2. Fazel Rui Dsyadzilli (202410370110439)
-- **Universitas**: Universitiy of Muhammadiyah Malang
+- **Developer**:
+    1. Faizul Mushofa (202410370110418)
+    2. Fazel Rui Dsyadzilli (202410370110439)
+- **Universitas**: University of Muhammadiyah Malang
 - **Mata Kuliah**: Pemrograman Lanjut
 
 ---
@@ -453,4 +404,20 @@ Aplikasi memiliki 2 akun default:
 Project ini dibuat untuk keperluan akademik.
 
 ---
+
+## 📞 Kontak & Support
+
+Jika ada pertanyaan atau menemukan bug, silakan hubungi tim developer.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Java Swing Documentation** - Oracle
+- **Material Design Color Palette** - Google
+- **Lombok** - Project Lombok
+- **Stack Overflow Community**
+
+---
+
 **© 2024 Contact Manager. All Rights Reserved.**
