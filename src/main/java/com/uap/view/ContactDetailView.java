@@ -22,6 +22,7 @@ public class ContactDetailView extends JFrame {
     private JButton deleteButton;
     private boolean editMode = false;
 
+    // Constructor: menghubungkan view dengan parent, controller, dan data contact
     public ContactDetailView(DashboardView parent, ContactController contactController, Contact contact) {
         this.parent = parent;
         this.contactController = contactController;
@@ -31,6 +32,7 @@ public class ContactDetailView extends JFrame {
         setLocationRelativeTo(parent);
     }
 
+    // Method untuk membangun seluruh tampilan UI (header, form, button)
     private void initComponents() {
         setTitle("Contact Details - Contact Manager");
         setSize(600, 750);
@@ -140,6 +142,7 @@ public class ContactDetailView extends JFrame {
         add(buttonPanel, BorderLayout.SOUTH);
     }
 
+    // Factory method untuk membuat JTextField dengan style konsisten
     private JTextField createTextField() {
         JTextField field = new JTextField();
         field.setFont(new Font("Segoe UI", Font.PLAIN, 14));
@@ -154,6 +157,7 @@ public class ContactDetailView extends JFrame {
         return field;
     }
 
+    // Membuat panel berisi label dan field (reusable)
     private JPanel createFieldPanel(String labelText, JComponent field) {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
@@ -173,6 +177,7 @@ public class ContactDetailView extends JFrame {
         return panel;
     }
 
+    // Membuat tombol dengan warna dan efek hover
     private JButton createStyledButton(String text, Color bgColor, Color fgColor) {
         JButton button = new JButton(text);
         button.setFont(new Font("Segoe UI", Font.BOLD, 13));
@@ -198,6 +203,7 @@ public class ContactDetailView extends JFrame {
         return button;
     }
 
+    // Mengisi data contact ke semua field
     private void loadContactData() {
         nameField.setText(contact.getName());
         phoneField.setText(contact.getPhone());
@@ -206,6 +212,7 @@ public class ContactDetailView extends JFrame {
         favoriteCheck.setSelected(contact.isFavorite());
     }
 
+    // Handler tombol kiri (Back atau Cancel)
     private void handleLeftButton() {
         if (editMode) {
             // Cancel edit
@@ -225,6 +232,7 @@ public class ContactDetailView extends JFrame {
         }
     }
 
+    // Handler tombol kanan (Edit atau Save)
     private void handleRightButton() {
         if (editMode) {
             // Save changes
@@ -235,6 +243,7 @@ public class ContactDetailView extends JFrame {
         }
     }
 
+    // Mengubah state edit mode dan tampilan UI
     private void toggleEditMode() {
         editMode = !editMode;
 
@@ -269,6 +278,7 @@ public class ContactDetailView extends JFrame {
         }
     }
 
+    // Menyimpan perubahan data contact melalui controller
     private void handleSave() {
         String name = nameField.getText().trim();
         String phone = phoneField.getText().trim();
@@ -302,6 +312,7 @@ public class ContactDetailView extends JFrame {
         }
     }
 
+    // Menghapus contact dengan konfirmasi
     private void handleDelete() {
         int result = JOptionPane.showConfirmDialog(this,
                 "Are you sure you want to delete this contact?\nThis action cannot be undone.",

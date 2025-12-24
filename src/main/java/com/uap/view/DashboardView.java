@@ -20,6 +20,7 @@ public class DashboardView extends JFrame {
     private JCheckBox favoriteFilter;
     private TableRowSorter<DefaultTableModel> sorter;
 
+    // Constructor - inisialisasi dashboard dengan user yang login
     public DashboardView(User user) {
         this.currentUser = user;
         this.contactController = new ContactController();
@@ -28,6 +29,7 @@ public class DashboardView extends JFrame {
         setLocationRelativeTo(null);
     }
 
+    // Inisialisasi komponen utama frame (header dan content)
     private void initComponents() {
         setTitle("Contact Manager - Dashboard");
         setSize(1000, 700);
@@ -43,6 +45,7 @@ public class DashboardView extends JFrame {
         add(contentPanel, BorderLayout.CENTER);
     }
 
+    // Membuat panel header dengan judul dan tombol logout
     private JPanel createHeaderPanel() {
         JPanel panel = new JPanel();
         panel.setBackground(new Color(33, 150, 243));
@@ -89,6 +92,7 @@ public class DashboardView extends JFrame {
         return panel;
     }
 
+    // Membuat panel konten utama (filter dan tabel)
     private JPanel createContentPanel() {
         JPanel panel = new JPanel(new BorderLayout(0, 20));
         panel.setBackground(new Color(245, 245, 245));
@@ -105,6 +109,7 @@ public class DashboardView extends JFrame {
         return panel;
     }
 
+    // Membuat panel filter (search, kategori, favorit, dan tombol add)
     private JPanel createFilterPanel() {
         JPanel panel = new JPanel();
         panel.setBackground(Color.WHITE);
@@ -184,6 +189,7 @@ public class DashboardView extends JFrame {
         return panel;
     }
 
+    // Membuat panel tabel untuk menampilkan daftar kontak
     private JPanel createTablePanel() {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBackground(Color.WHITE);
@@ -241,6 +247,7 @@ public class DashboardView extends JFrame {
         return panel;
     }
 
+    // Load semua kontak ke tabel
     private void loadContacts() {
         tableModel.setRowCount(0);
         List<Contact> contacts = contactController.getAllContacts();
@@ -255,6 +262,7 @@ public class DashboardView extends JFrame {
         }
     }
 
+    // Terapkan filter search, kategori, dan favorit pada tabel
     private void applyFilters() {
         List<Contact> allContacts = contactController.getAllContacts();
         String searchText = searchField.getText().toLowerCase().trim();
@@ -287,12 +295,14 @@ public class DashboardView extends JFrame {
         }
     }
 
+    // Buka halaman tambah kontak dan sembunyikan dashboard
     private void openAddContactView() {
         AddContactView addView = new AddContactView(this, contactController);
         setVisible(false); // Sembunyikan dashboard
         addView.setVisible(true);
     }
 
+    // Buka halaman detail kontak saat double-click pada tabel
     private void openContactDetailView(int row) {
         List<Contact> contacts = contactController.getAllContacts();
         String searchText = searchField.getText().toLowerCase().trim();
@@ -321,10 +331,12 @@ public class DashboardView extends JFrame {
         }
     }
 
+    // Refresh tabel setelah ada perubahan data (dipanggil dari view lain)
     public void refreshTable() {
         applyFilters();
     }
 
+    // Handle logout dengan konfirmasi
     private void handleLogout() {
         int result = JOptionPane.showConfirmDialog(this,
                 "Are you sure you want to logout?",

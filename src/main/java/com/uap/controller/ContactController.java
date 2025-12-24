@@ -10,11 +10,13 @@ import java.util.Optional;
 public class ContactController {
     private final UserService userService;
 
+    // Constructor - inisialisasi UserService dan tambahkan data dummy
     public ContactController() {
         this.userService = new UserService();
         initializeDefaultContacts();
     }
 
+    // Menambahkan 5 kontak default jika database masih kosong
     private void initializeDefaultContacts() {
         // Add default contacts if none exist
         if (userService.listContacts().isEmpty()) {
@@ -26,14 +28,17 @@ public class ContactController {
         }
     }
 
+    // Mengambil semua kontak dari database
     public List<Contact> getAllContacts() {
         return userService.listContacts();
     }
 
+    // Mengambil satu kontak berdasarkan ID
     public Optional<Contact> getContactById(String id) {
         return userService.getContact(id);
     }
 
+    // Membuat kontak baru dengan validasi
     public Contact createContact(String name, String phone, String email, String category, boolean favorite) {
         try {
             return userService.createContact(name, phone, email, category, favorite);
@@ -42,6 +47,7 @@ public class ContactController {
         }
     }
 
+    // Update data kontak berdasarkan ID dengan validasi
     public Contact updateContact(String id, String name, String phone, String email, String category, Boolean favorite) {
         try {
             return userService.updateContact(id, name, phone, email, category, favorite);
@@ -50,6 +56,7 @@ public class ContactController {
         }
     }
 
+    // Menghapus kontak berdasarkan ID
     public void deleteContact(String id) {
         try {
             userService.deleteContact(id);
@@ -58,10 +65,12 @@ public class ContactController {
         }
     }
 
+    // Mencari kontak berdasarkan nama atau nomor telepon
     public List<Contact> searchContacts(String query) {
         return userService.searchContacts(query);
     }
 
+    // Filter kontak berdasarkan kategori (Friend/Family/School/Work)
     public List<Contact> filterByCategory(String category) {
         if (category == null || category.equals("All")) {
             return getAllContacts();
@@ -69,10 +78,12 @@ public class ContactController {
         return userService.filterByCategory(category);
     }
 
+    // Mengambil semua kontak yang ditandai sebagai favorit
     public List<Contact> getFavorites() {
         return userService.favorites();
     }
 
+    // Toggle status favorit kontak (true <-> false)
     public Contact toggleFavorite(String id) {
         try {
             return userService.toggleFavorite(id);

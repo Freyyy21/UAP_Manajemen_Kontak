@@ -17,6 +17,7 @@ public class AddContactView extends JFrame {
     private JComboBox<String> categoryCombo;
     private JCheckBox favoriteCheck;
 
+    // Constructor - inisialisasi dengan parent dashboard dan controller
     public AddContactView(DashboardView parent, ContactController contactController) {
         this.parent = parent;
         this.contactController = contactController;
@@ -24,6 +25,7 @@ public class AddContactView extends JFrame {
         setLocationRelativeTo(parent);
     }
 
+    // Inisialisasi semua komponen UI untuk form tambah kontak
     private void initComponents() {
         setTitle("Add New Contact - Contact Manager");
         setSize(600, 700);
@@ -117,6 +119,7 @@ public class AddContactView extends JFrame {
         add(buttonPanel, BorderLayout.SOUTH);
     }
 
+    // Membuat text field dengan styling yang konsisten
     private JTextField createTextField() {
         JTextField field = new JTextField();
         field.setFont(new Font("Segoe UI", Font.PLAIN, 14));
@@ -129,6 +132,7 @@ public class AddContactView extends JFrame {
         return field;
     }
 
+    // Membuat panel untuk setiap field (label + input)
     private JPanel createFieldPanel(String labelText, JComponent field) {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
@@ -148,6 +152,7 @@ public class AddContactView extends JFrame {
         return panel;
     }
 
+    // Membuat button dengan styling dan hover effect
     private JButton createStyledButton(String text, Color bgColor, Color fgColor) {
         JButton button = new JButton(text);
         button.setFont(new Font("Segoe UI", Font.BOLD, 13));
@@ -172,6 +177,7 @@ public class AddContactView extends JFrame {
         return button;
     }
 
+    // Handle tombol cancel - konfirmasi sebelum menutup form
     private void handleCancel() {
         int result = JOptionPane.showConfirmDialog(this,
                 "Discard this contact?",
@@ -184,6 +190,7 @@ public class AddContactView extends JFrame {
         }
     }
 
+    // Handle tombol save - validasi dan simpan kontak baru
     private void handleSave() {
         String name = nameField.getText().trim();
         String phone = phoneField.getText().trim();

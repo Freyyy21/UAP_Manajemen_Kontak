@@ -14,6 +14,14 @@ public class LoginController {
         users.put("faizul", new User(2L, "faizul", "faizul123"));
     }
 
+    /**
+     * Method untuk melakukan autentikasi user
+     *
+     * @param username - Username yang diinput user
+     * @param password - Password yang diinput user
+     * @return User object jika login berhasil
+     * @throws IllegalArgumentException jika validasi gagal
+     */
     public User authenticate(String username, String password) {
         if (username == null || username.trim().isEmpty()) {
             throw new IllegalArgumentException("Username tidak boleh kosong");

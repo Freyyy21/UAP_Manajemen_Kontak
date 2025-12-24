@@ -5,26 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9e6022a-8a0a-4d9a-ae07-9c14406547c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uap/controller/ContactController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uap/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uap/view/AddContactView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uap/view/ContactDetailView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uap/view/DashboardView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uap/view/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/contacts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/contacts.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uap/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uap/controller/controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uap/view/ContactDetailDialog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uap/view/ContactManagerView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uap/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uap/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uap/controller/controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uap/view/ContactDetailDialog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uap/view/ContactManagerView$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uap/view/ContactManagerView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uap/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uap/controller/ContactController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uap/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uap/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uap/view/DashboardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uap/view/DashboardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uap/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uap/view/LoginView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +47,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.LoginView.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.ManualTest.executor": "Run",
     "Application.NavigationController.executor": "Run",

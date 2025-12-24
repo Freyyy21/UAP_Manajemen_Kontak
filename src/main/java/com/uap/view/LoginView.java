@@ -12,12 +12,14 @@ public class LoginView extends JFrame {
     private JButton loginButton;
     private LoginController loginController;
 
+    // Constructor - inisialisasi LoginController dan komponen UI
     public LoginView() {
         loginController = new LoginController();
         initComponents();
         setLocationRelativeTo(null);
     }
 
+    // Inisialisasi semua komponen UI login page
     private void initComponents() {
         setTitle("Contact Manager - Login");
         setSize(450, 550);
@@ -159,6 +161,7 @@ public class LoginView extends JFrame {
         passwordField.addActionListener(e -> handleLogin());
     }
 
+    // Handle proses login - validasi dan buka dashboard jika berhasil
     private void handleLogin() {
         String username = usernameField.getText().trim();
         String password = new String(passwordField.getPassword());
@@ -191,15 +194,4 @@ public class LoginView extends JFrame {
                 JOptionPane.ERROR_MESSAGE);
     }
 
-    public static void main(String[] args) {
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        SwingUtilities.invokeLater(() -> {
-            new LoginView().setVisible(true);
-        });
-    }
 }
