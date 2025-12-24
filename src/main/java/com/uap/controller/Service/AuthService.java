@@ -19,7 +19,7 @@ public class AuthService {
 	// default constructor (uses data/users.csv)
 	public AuthService() {
 		try {
-			this.userRepo = new CsvUserRepository("data/users.csv");
+			this.userRepo = new CsvUserRepository();
 		} catch (IOException e) {
 			throw new RuntimeException("Failed to init user repo: " + e.getMessage(), e);
 		}

@@ -9,12 +9,12 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class CsvUserRepository implements UserRepository {
-	private final Path filePath;
+	private Path filePath = Paths.get("./Data/users.csv");
 	private final Map<String, User> store = new ConcurrentHashMap<>();
 	private static final String HEADER = "id,username,password";
 
-	public CsvUserRepository(String filepath, boolean overwrite) throws IOException {
-		this.filePath = Paths.get(filepath);
+	public CsvUserRepository(boolean overwrite) throws IOException {
+		this.filePath = Paths.get(filePath.toString());
 		init();
 		if (overwrite && Files.exists(filePath)) {
 			Files.write(filePath, Collections.singleton(HEADER), StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
@@ -27,8 +27,8 @@ public class CsvUserRepository implements UserRepository {
 		}
 	}
 
-	public CsvUserRepository(String filepath) throws IOException {
-		this(filepath, false);
+	public CsvUserRepository() throws IOException {
+		this(false);
 	}
 
 	private void init() throws IOException {

@@ -34,7 +34,7 @@ public class ManualTest {
 	Path usersDir = dataDir.resolve("users-manual");
 	if (!Files.exists(usersDir)) Files.createDirectories(usersDir);
 	String usersCsv = usersDir.resolve("users.csv").toString();
-	CsvUserRepository usersRepo = new CsvUserRepository(usersCsv, true);
+	CsvUserRepository usersRepo = new CsvUserRepository( true);
 	AuthService auth = new AuthService(usersRepo);
 
 	System.out.println("-> Register user 'tester'");
