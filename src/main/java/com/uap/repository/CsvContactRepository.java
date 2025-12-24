@@ -14,19 +14,31 @@ public class CsvContactRepository implements ContactRepository {
 	private final Map<String, Contact> store = new ConcurrentHashMap<>();
 	private static final String HEADER = "id,name,phone,email,category,favorite";
 
-	public CsvContactRepository(String filepath) throws IOException {
+	// New constructor that allows forcing overwrite of existing file
+	public CsvContactRepository(String filepath, boolean overwrite) throws IOException {
 		this.filePath = Paths.get(filepath);
 		init();
-		load();
+		if (overwrite && Files.exists(filePath)) {
+			// overwrite existing file with just the header
+			Files.write(filePath, Collections.singleton(HEADER), StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+			store.clear();
+		} else {
+			// create file if not exists, otherwise load its content
+			if (!Files.exists(filePath)) {
+				Files.write(filePath, Collections.singleton(HEADER), StandardCharsets.UTF_8, StandardOpenOption.CREATE);
+			}
+			load();
+		}
+	}
+
+	public CsvContactRepository(String filepath) throws IOException {
+		this(filepath, false);
 	}
 
 	private void init() throws IOException {
 		Path parent = filePath.getParent();
 		if (parent != null && !Files.exists(parent)) {
 			Files.createDirectories(parent);
-		}
-		if (!Files.exists(filePath)) {
-			Files.write(filePath, Collections.singleton(HEADER), StandardCharsets.UTF_8, StandardOpenOption.CREATE);
 		}
 	}
 
@@ -83,7 +95,7 @@ public class CsvContactRepository implements ContactRepository {
 
 	@Override
 	public synchronized Contact save(Contact contact) {
-		// create or update
+		//membuat id baru jika belum ada
 		if (contact.getId() == null || contact.getId().trim().isEmpty()) {
 			contact.setId(UUID.randomUUID().toString());
 		}

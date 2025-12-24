@@ -13,7 +13,7 @@ public class ValidationUtil {
 	}
 
 	public static void validateEmail(String email) {
-		if (email == null || email.trim().isEmpty()) return; // optional
+		if (email == null || email.trim().isEmpty()) return; 
 		if (!EMAIL.matcher(email).matches()) {
 			throw new ValidationException("Invalid email format");
 		}

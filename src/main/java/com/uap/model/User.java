@@ -1,16 +1,27 @@
 package com.uap.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Setter
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
+// Plain Java POJO for users (avoid Lombok to keep compilation simple)
 public class User {
-    private Long id;
-    private String username;
-    private String passsword;
+	// use string id (uuid) to simplify CSV storage
+	private String id;
+	private String username;
+	// store hashed password (salt:hash)
+	private String password;
+
+	public User() {}
+
+	public User(String id, String username, String password) {
+		this.id = id;
+		this.username = username;
+		this.password = password;
+	}
+
+	public String getId() { return id; }
+	public void setId(String id) { this.id = id; }
+
+	public String getUsername() { return username; }
+	public void setUsername(String username) { this.username = username; }
+
+	public String getPassword() { return password; }
+	public void setPassword(String password) { this.password = password; }
 }

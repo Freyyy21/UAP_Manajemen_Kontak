@@ -11,6 +11,11 @@ public class Contact {
 	private String category;
 	private boolean favorite;
 
+	public Contact(String name, String phone, String email, String category, boolean favorite) {
+		this(UUID.randomUUID().toString(), name, phone, email, category, favorite);
+	}
+
+	// full constructor (used when loading from CSV)
 	public Contact(String id, String name, String phone, String email, String category, boolean favorite) {
 		this.id = id;
 		this.name = name;
@@ -20,23 +25,25 @@ public class Contact {
 		this.favorite = favorite;
 	}
 
-	public Contact(String name, String phone, String email, String category, boolean favorite) {
-		this(UUID.randomUUID().toString(), name, phone, email, category, favorite);
-	}
-
 	// getters & setters
 	public String getId() { return id; }
 	public void setId(String id) { this.id = id; }
+
 	public String getName() { return name; }
 	public void setName(String name) { this.name = name; }
+
 	public String getPhone() { return phone; }
 	public void setPhone(String phone) { this.phone = phone; }
+
 	public String getEmail() { return email; }
 	public void setEmail(String email) { this.email = email; }
+
 	public String getCategory() { return category; }
 	public void setCategory(String category) { this.category = category; }
+
 	public boolean isFavorite() { return favorite; }
 	public void setFavorite(boolean favorite) { this.favorite = favorite; }
+
 
 	// CSV representation (escape quotes)
 	private String escape(String s) {
@@ -57,6 +64,7 @@ public class Contact {
 
 	public static Contact fromCsvRow(String[] cols) {
 		// Expect cols length >= 6
+		// mempetakan kolom CSV ke properti kontak
 		String id = cols.length > 0 ? unquote(cols[0]) : "";
 		String name = cols.length > 1 ? unquote(cols[1]) : "";
 		String phone = cols.length > 2 ? unquote(cols[2]) : "";

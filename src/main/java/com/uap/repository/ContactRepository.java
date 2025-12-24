@@ -7,9 +7,9 @@ import java.util.Optional;
 public interface ContactRepository {
     List<Contact> findAll();
     Optional<Contact> findById(String id);
-    Contact save(Contact contact); // create or update
+    Contact save(Contact contact); 
     void delete(String id);
-    List<Contact> search(String query); // search name or phone
+    List<Contact> search(String query); 
     List<Contact> filterByCategory(String category);
     List<Contact> favorites();
 }
